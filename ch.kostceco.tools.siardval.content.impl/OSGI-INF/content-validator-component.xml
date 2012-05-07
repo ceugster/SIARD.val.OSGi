@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="ch.kostceco.tools.siardval.content.validator">
+   <implementation class="ch.kostceco.tools.siardval.content.impl.internal.service.ContentValidatorComponent"/>
+   <service>
+      <provide interface="ch.kostceco.tools.siardval.content.api.service.ContentValidator"/>
+   </service>
+   <reference bind="bindLogService" cardinality="1..1" interface="org.osgi.service.log.LogService" name="LogService" policy="static" unbind="unbindLogService"/>
+   <reference bind="bindZipService" cardinality="1..1" interface="ch.kostceco.tools.siardval.zip.api.service.ZipService" name="ZipService" policy="static" unbind="unbindZipService"/>
+   <reference bind="bindXmlService" cardinality="1..1" interface="ch.kostceco.tools.siardval.xml.api.service.XmlService" name="XmlService" policy="static" unbind="unbindXmlService"/>
+</scr:component>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="ch.kostceco.tools.siardval.directory.validator">
+   <implementation class="ch.kostceco.tools.siardval.directory.impl.internal.service.DirectoryStructureValidatorComponent"/>
+   <service>
+      <provide interface="ch.kostceco.tools.siardval.directory.api.service.DirectoryStructureValidator"/>
+   </service>
+   <reference bind="bindLogService" cardinality="1..1" interface="org.osgi.service.log.LogService" name="LogService" policy="static" unbind="unbindLogService"/>
+   <reference bind="bindZipService" cardinality="1..1" interface="ch.kostceco.tools.siardval.zip.api.service.ZipService" name="ZipService" policy="static" unbind="unbindZipService"/>
+</scr:component>

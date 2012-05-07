@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="startup" deactivate="shutdown" name="ch.kostceco.tools.log.file.component">
+   <implementation class="ch.kostceco.tools.siardval.log.file.internal.FileLogComponent"/> 
+   <reference bind="setLogReader" cardinality="1..1" interface="org.osgi.service.log.LogReaderService" name="LogReaderService" policy="static" unbind="releaseLogReader"/>ice>>>
+</scr:component>

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Table Column Validator Tester
+Bundle-SymbolicName: ch.kostceco.tools.siardval.column.test
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Christian Eugster
+Fragment-Host: ch.kostceco.tools.siardval.column.impl;bundle-version="[1.0.0,2.0.0)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.junit
+Import-Package: ch.kostceco.tools.siardval.service.api,
+ org.osgi.util.tracker;version="1.5.0"

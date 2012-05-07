@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="ch.kostceco.tools.siardval.validation.step.table.row.service.component">
+   <implementation class="ch.kostceco.tools.siardval.row.impl.internal.service.ValidationStepTableRowServiceComponent"/>
+   <service>
+      <provide interface="ch.kostceco.tools.siardval.service.api.ValidationStepService"/>
+   </service>
+   <reference bind="bindTableRowValidator" cardinality="1..1" interface="ch.kostceco.tools.siardval.row.api.service.TableRowValidator" name="TableRowValidator" policy="static" unbind="unbindTableRowValidator"/>
+   <property name="service.ranking" type="Integer" value="500000000"/>
+</scr:component>

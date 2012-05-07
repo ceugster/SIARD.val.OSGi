@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Zip Service Tester
+Bundle-SymbolicName: ch.kostceco.tools.siardval.zip.test
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Christian Eugster
+Fragment-Host: ch.kostceco.tools.siardval.zip.impl;bundle-version="[1.0.0,2.0.0)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.junit
+Import-Package: ch.kostceco.tools.siardval.zip.api.service,
+ org.osgi.util.tracker;version="1.5.0"

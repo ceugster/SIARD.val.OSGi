@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="ch.kostceco.tools.siardval.client.console.component">
+   <implementation class="ch.kostceco.tools.siardval.client.console.internal.service.ClientConsoleComponent"/>
+   <service>
+      <provide interface="org.eclipse.osgi.framework.console.CommandProvider"/>
+   </service>
+   <reference bind="bindLogService" cardinality="1..1" interface="org.osgi.service.log.LogService" name="LogService" policy="static" unbind="unbindLogService"/>
+   <reference bind="bindValidatorService" cardinality="1..n" interface="ch.kostceco.tools.siardval.service.api.ValidatorService" name="ValidatorService" policy="static" unbind="unbindValidatorService"/>
+</scr:component>

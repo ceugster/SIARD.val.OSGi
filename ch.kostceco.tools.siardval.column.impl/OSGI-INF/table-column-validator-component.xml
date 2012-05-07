@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="ch.kostceco.tools.siardval.table.column.validator">
+   <implementation class="ch.kostceco.tools.siardval.column.impl.internal.service.TableColumnValidatorComponent"/>
+   <service>
+      <provide interface="ch.kostceco.tools.siardval.column.api.service.TableColumnValidator"/>
+   </service>
+</scr:component>

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: File format Validator Tester
+Bundle-SymbolicName: ch.kostceco.tools.siardval.format.test
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Christian Eugster
+Fragment-Host: ch.kostceco.tools.siardval.format.impl;bundle-version="[1.0.0,2.0.0)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.junit
+Import-Package: org.osgi.util.tracker;version="1.5.0"

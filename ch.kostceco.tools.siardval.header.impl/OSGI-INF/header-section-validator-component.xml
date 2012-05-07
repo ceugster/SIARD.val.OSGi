@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="ch.kostceco.tools.siardval.header.section.validator">
+   <implementation class="ch.kostceco.tools.siardval.header.impl.internal.service.HeaderSectionValidatorComponent"/>
+   <service>
+      <provide interface="ch.kostceco.tools.siardval.header.api.service.HeaderSectionValidator"/>
+   </service>
+   <reference bind="bindLogService" cardinality="1..1" interface="org.osgi.service.log.LogService" name="LogService" policy="static" unbind="unbindLogService"/>
+   <reference bind="bindXmlService" cardinality="1..1" interface="ch.kostceco.tools.siardval.xml.api.service.XmlService" name="XmlService" policy="static" unbind="unbindXmlService"/>
+   <property name="service.ranking" type="Integer" value="800000000"/>
+   <reference bind="bindZipService" cardinality="1..1" interface="ch.kostceco.tools.siardval.zip.api.service.ZipService" name="ZipService" policy="static" unbind="unbindZipService"/>
+   <reference bind="bindChecksumValidator" cardinality="1..1" interface="ch.kostceco.tools.siardval.checksum.api.service.ChecksumValidator" name="ChecksumValidator" policy="static" unbind="unbindChecksumValidator"/>
+</scr:component>

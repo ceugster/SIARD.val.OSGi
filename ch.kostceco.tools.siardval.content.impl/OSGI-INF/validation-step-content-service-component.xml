@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="ch.kostceco.tools.siardval.validation.step.content.service">
+   <implementation class="ch.kostceco.tools.siardval.content.impl.internal.service.ValidationStepContentServiceComponent"/>
+   <service>
+      <provide interface="ch.kostceco.tools.siardval.service.api.ValidationStepService"/>
+   </service>
+   <reference bind="bindContentValidator" cardinality="1..1" interface="ch.kostceco.tools.siardval.content.api.service.ContentValidator" name="ContentValidator" policy="static" unbind="unbindContentValidator"/>
+   <property name="service.ranking" type="Integer" value="300000000"/>
+</scr:component>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="ch.kostceco.tools.siardval.header.section.service.validator">
+   <implementation class="ch.kostceco.tools.siardval.header.impl.internal.service.HeaderSectionValidatorServiceComponent"/>
+   <service>
+      <provide interface="ch.kostceco.tools.siardval.service.api.ValidatorService"/>
+   </service>
+   <reference bind="bindHeaderSectionValidator" cardinality="1..1" interface="ch.kostceco.tools.siardval.header.api.service.HeaderSectionValidator" name="HeaderSectionValidator" policy="static" unbind="unbindHeaderSectionValidator"/>
+   <property name="service.ranking" type="Integer" value="800000000"/>
+</scr:component>
